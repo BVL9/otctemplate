@@ -96,7 +96,6 @@
 												<p>Адрес: 630078, г. Новосибирск, ул. Выставочная, 15/1</p>
 												<br>
 												(383) 351-44-99 (факс)<br>
-												(383) 346-22-77 (Директор)<br>
 												(383) 346-54-53 (Лаборатория)<br>
 												(383) 346-27-29 (ИТР)<br>
 												E-mail: ots-nsk@rambler.ru<br>
@@ -111,29 +110,40 @@
 										<h2>Напишите нам</h2>
 									</header>
 									<section>
-									<form>
+										<script type="text/javascript">
+										function sendMail() {
+										    var link = "mailto:samjam91@mail.ru"
+										             + "?cc=samjam91@mail.ru"
+										             + "&subject=" + escape("This is my subject")
+										             + "&body=" + escape(document.getElementById('myText').value)
+										    ;
+
+										    window.location.href = link;
+										}
+</script>
+									<form method = "post" action="" id="nothing_have_matter">
 										<table>
 											<tr>
-												<input type="text" placeholder="Ваше имя">
+												<input id="name" type="text" placeholder="Ваше имя">
 											</tr>
 											<br>
 										<tr>
-											<input type="text" placeholder="Тема сообщения">
+											<input id="subject" type="text" placeholder="Тема сообщения">
 										</tr>
 										<br>
 										<tr>
-										<input type="text" placeholder="Ваш телефон или E-mail ">
+										<input id="contact" type="text"  placeholder="Ваш телефон или E-mail ">
 									</tr>
 									<br>
 									<tr>
-										<textarea placeholder="Ваше сообщение"></textarea>
+										<textarea id="txt"  placeholder="Ваше сообщение"></textarea>
 									</tr>
 									<br>
 									<tr>
 										<td>
-	</td>
+											</td>
 										<td>
-										<input type="submit" align="right">
+										<input type="submit" onclick="sendMail(); return false" align="right" value="Ок">
 									</td>
 									</tr>
 									</table>
