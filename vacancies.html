@@ -8,12 +8,36 @@
 	<head>
 		<title>Вакансии</title>
 		<meta charset="utf-8" />
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<link rel="stylesheet" href="reveal.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script>var $j = jQuery.noConflict(true);</script>
+    <script>
+      $(document).ready(function(){
+       console.log($j().jquery); // This prints v1.4.2
+       console.log($().jquery); // This prints v1.9.1
+      });
+   </script>
+		<script src="assets/js/jquery.reveal.js" type="text/javascript"></script>
+
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.onvisible.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+
 	</head>
 	<body class="right-sidebar">
+
+
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -26,7 +50,8 @@
 							</header>
 						</div>
 
-					<!-- Nav --><nav id="nav">
+					<!-- Nav -->
+					<nav id="nav">
 						<ul>
 							<li><a href="index.html">Главная</a></li>
 							<li><a href="#footer">Связаться с нами</a></li>
@@ -34,18 +59,20 @@
 								<a href="#">О нас</a>
 								<ul>
 									<li><a href="history.html">История</a></li>
-									<li><a href="#">Наши документы</a></li>
+
 									<li><a href="history.html">Руководство</a></li>
 								</ul>
 							</li>
 							<li><a href="left-sidebar.html">Услуги</a></li>
 							<li><a href="left-sidebar.html">Новости</a></li>
 							<li><a href="vacancies.html">Вакансии</a></li>
+							
 							<!--<li><a href="no-sidebar.html">No Sidebar</a></li>-->
 						</ul>
 					</nav>
 
 				</div>
+
 
 			<!-- Main -->
 				<div class="wrapper style1">
@@ -75,8 +102,8 @@
 
 								</article>
 							</div>
-
-
+							<a href="#" class="image featured"><img src="images/imgVakan.jpg" alt="" /></a>
+							<section>
 
 					</div>
 
@@ -110,40 +137,35 @@
 										<h2>Напишите нам</h2>
 									</header>
 									<section>
-										<script type="text/javascript">
-										function sendMail() {
-										    var link = "mailto:samjam91@mail.ru"
-										             + "?cc=samjam91@mail.ru"
-										             + "&subject=" + escape("This is my subject")
-										             + "&body=" + escape(document.getElementById('myText').value)
-										    ;
 
-										    window.location.href = link;
-										}
-</script>
-									<form method = "post" action="" id="nothing_have_matter">
+									<form method = "post" action="form.php" id="nothing_have_matter">
 										<table>
 											<tr>
-												<input id="name" type="text" placeholder="Ваше имя">
+												<input id="name" name="name" type="text" required="required" placeholder="Ваше имя">
 											</tr>
 											<br>
 										<tr>
-											<input id="subject" type="text" placeholder="Тема сообщения">
+											<input id="subject" name="subject" type="text" required="required" placeholder="Тема сообщения">
 										</tr>
 										<br>
 										<tr>
-										<input id="contact" type="text"  placeholder="Ваш телефон или E-mail ">
+										<input id="contact" name="contact" type="text" required="required" placeholder="Ваш телефон или E-mail ">
 									</tr>
 									<br>
 									<tr>
-										<textarea id="txt"  placeholder="Ваше сообщение"></textarea>
+										<textarea id="txt" name="txt" required="required" placeholder="Ваше сообщение"></textarea>
 									</tr>
 									<br>
+									<tr>
+										<div class="g-recaptcha" data-sitekey="6LdHiAcUAAAAAGvLUXxkgU35PIGTP251IZzhbzBH"></div>
+									</tr>
+
+
 									<tr>
 										<td>
 											</td>
 										<td>
-										<input type="submit" onclick="sendMail(); return false" align="right" value="Ок">
+										<input type="submit" >
 									</td>
 									</tr>
 									</table>
@@ -166,17 +188,8 @@
 						</div>
 
 
-
-
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.onvisible.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+
 
 	</body>
 </html>

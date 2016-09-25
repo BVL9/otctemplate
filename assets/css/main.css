@@ -22,6 +22,8 @@
 		display: block;
 	}
 
+
+
 	body {
 		line-height: 1;
 	}
@@ -1583,6 +1585,9 @@
 		color: #483949;
 		line-height: 1.25em;
 	}
+	p.name{
+		display: inline-block;
+	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 		color: inherit;
@@ -1630,6 +1635,7 @@
 			color: #ef8376;
 			border-bottom-color: transparent;
 		}
+
 
 	sub {
 		position: relative;
@@ -1863,12 +1869,32 @@
 					color: #ef8376;
 				}
 
+	.pagination li{
+		display:inline-block;
+    padding:5px;
+	}
+
+	ol.pagination{
+		display: inline-block;
+	}
+
+
 	ol.default {
 		list-style: decimal;
 		padding-left: 1.25em;
 	}
 
-	padding-left: 0.25em;
+	div.hid{
+		display: none;
+	}
+
+
+.pagination li {
+  display:inline-block;
+  padding:5px;
+}
+
+padding-left: 0.25em;
 		ol.default li {
 		}
 
@@ -2388,6 +2414,8 @@
 		background: #2b252c;
 		color: #fff;
 	}
+
+
 
 		#footer .icon.circled {
 			background: #fff;
